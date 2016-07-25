@@ -2,25 +2,25 @@ import React, { Component } from 'react';
 
 import {
   TouchableHighlight,
-  StyleSheet,
+  Stylesheet,
   View,
   Text
 } from 'react-native';
 
-export default class SignInComponent extends Component {
-  signInButton(){
-    console.log("Sign in clicked");
+export default class SignUpComponent extends Component{
+  signUnButton(){
+    console.log('Sign up clicked');
   }
-  render(){
-    return(
+  render() {
+    return (
       <View>
         <TouchableHighlight 
-          onPress={this.signInButton.bind(this)}>
+          onPress={this.signUnButton.bind(this)}>
           <View>
-            <Text>Sign In</Text>
+            <Text>Sign Up</Text>
           </View>
         </TouchableHighlight>
       </View>
     );
   }
-};
+}

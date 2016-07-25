@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import SignInComponent from './../Auth/SignInComponent';
+import SignUpComponent from './../Auth/SignUpComponent';
 
 import {
   Stylesheet,
@@ -10,17 +12,10 @@ export default class AuthComponent extends Component {
   render() {
     return (
       <View>
-        <Text>
-          SIGN IN
-          SIGN UP
-        </Text>
+        <SignInComponent />
+        <SignUpComponent />
       </View>
     );
   }
 };
-// <TouchableHighlight 
-//           onPress={this.buttonClicked.bind(this)}>
-//           <View>
-//             <Text>Button!</Text>
-//           </View>
-//         </TouchableHighlight>
+
