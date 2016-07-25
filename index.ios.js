@@ -5,31 +5,34 @@
  */
 
 import React, { Component } from 'react';
+import HomeComponent from './src/components/Home/HomeComponent';
 import {
   AppRegistry,
   StyleSheet,
   Text,
   View
 } from 'react-native';
+console.log("HOME COMPONENT",HomeComponent);
 
 class LivestreamClient extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+      <HomeComponent />
     );
   }
 }
+// <View style={styles.container}>
+//   <Text style={styles.welcome}>
+//     Welcome to React Native!
+//   </Text>
+//   <Text style={styles.instructions}>
+//     To get started, edit index.ios.js
+//   </Text>
+//   <Text style={styles.instructions}>
+//     Press Cmd+R to reload,{'\n'}
+//     Cmd+D or shake for dev menu
+//   </Text>
+// </View>
 
 const styles = StyleSheet.create({
   container: {
