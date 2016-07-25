@@ -12,7 +12,6 @@ import {
   Text,
   View
 } from 'react-native';
-console.log("HOME COMPONENT",HomeComponent);
 
 class LivestreamClient extends Component {
   render() {
@@ -20,7 +19,8 @@ class LivestreamClient extends Component {
       <HomeComponent />
     );
   }
-}
+};
+
 // <View style={styles.container}>
 //   <Text style={styles.welcome}>
 //     Welcome to React Native!
