@@ -1,5 +1,7 @@
 import React, { Component } from 'React';
-import AuthComponent from './../Auth/AuthComponent.js';
+import SignInButtonComponent from './../Auth/SignInButtonComponent';
+import SignUpButtonComponent from './../Auth/SignUpButtonComponent';
+
 import {
     TouchableHighlight,
     StyleSheet,
@@ -15,25 +17,22 @@ let styles = StyleSheet.create({
     backgroundColor: '#F5FCFF'
   },
   welcome: {
-    fontSize: 30,
-    textAlign: 'center',
-    margin: 10,
+    marginTop: 100,
     color: '#6984cb'
   }
 
 });
 
 export default class HomeComponent extends Component {
-  buttonClicked() {
-    console.log(this);
-  }
+  
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
+      <View style={styles.welcome}>
+        <Text>
           Welcome!
         </Text>
-        <AuthComponent />
+        <SignInButtonComponent />
+        <SignUpButtonComponent />
       </View>
     );
   }

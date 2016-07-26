@@ -6,17 +6,24 @@
 
 import React, { Component } from 'react';
 import HomeComponent from './src/components/Home/HomeComponent';
+
 import {
   AppRegistry,
   StyleSheet,
   Text,
+  NavigatorIOS,
   View
 } from 'react-native';
 
 class LivestreamClient extends Component {
   render() {
     return (
-      <HomeComponent/>
+      <NavigatorIOS
+        style={styles.container}
+        initialRoute={{
+          title: 'Home',
+          component: HomeComponent
+        }} />
     );
   }
 };
@@ -37,9 +44,6 @@ class LivestreamClient extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
   },
   welcome: {
     fontSize: 20,

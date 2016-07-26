@@ -2,24 +2,34 @@ import React, { Component } from 'react';
 
 import {
   TouchableHighlight,
-  Stylesheet,
+  StyleSheet,
   View,
   Text
 } from 'react-native';
 
+let styles = StyleSheet.create({
+  button: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 70,
+    backgroundColor: '#EFEFEF'
+  }
+})
 export default class SignUpButtonComponent extends Component{
-  signUpButton(){
+
+  onSignUpPressed(){
     console.log('Sign up clicked');
   }
 
   render() {
     return (
       <View>
-        <TouchableHighlight 
-          onPress={this.signUpButton.bind(this)}>
-          <View>
-            <Text>Sign Up</Text>
-          </View>
+        <TouchableHighlight
+          style={styles.button}
+          onPress={() => {this.onSignUpPressed()}}
+          activeOpacity={75 / 100}
+          underlayColor={"rgb(210,210,210)"}>
+          <Text>Sign Up</Text>
         </TouchableHighlight>
       </View>
     );

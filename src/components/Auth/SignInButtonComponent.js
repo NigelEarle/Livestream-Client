@@ -7,6 +7,15 @@ import {
   Text
 } from 'react-native';
 
+let styles = StyleSheet.create({
+  button: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 70,
+    backgroundColor: '#EFEFEF'
+  }
+});
+
 export default class SignInButtonComponent extends Component {
   // static propTypes = {
   //   title: PropTypes.string.isRequired,
@@ -18,22 +27,23 @@ export default class SignInButtonComponent extends Component {
   //   this._onForward = this._onForward.bind(this);
   //   this._onBack = this._onBack.bind(this);
   // }
-  signInButton(){
+  onSignInPressed(){
     console.log("Sign in clicked");
+    this.props.navigator.push({
+      title: 'Sign In',
+      
+    });
   }
-  // _onForward () {
-  //   this.props.navigator.push({
-  //     title: 'Scene ' + nextIndex,
-  //   });
-  // }
+  
   render(){
     return(
       <View>
-        <TouchableHighlight 
-          onPress={this.signInButton.bind(this)}>
-          <View>
-            <Text>Sign In</Text>
-          </View>
+        <TouchableHighlight
+          style={styles.button}
+          onPress={() => {this.onSignInPressed()}}
+          activeOpacity={75 / 100}
+          underlayColor={"rgb(210,210,210)"}>
+          <Text>Sign In</Text>
         </TouchableHighlight>
       </View>
     );
