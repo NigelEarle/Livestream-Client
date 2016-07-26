@@ -16,7 +16,7 @@ import {
 class LivestreamClient extends Component {
   render() {
     return (
-      <HomeComponent />
+      <HomeComponent/>
     );
   }
 };

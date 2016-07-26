@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 
 import {
   TouchableHighlight,
-  PropTypes,
   Stylesheet,
   View,
   Text
 } from 'react-native';
 
 export default class SignUpButtonComponent extends Component{
-  signUnButton(){
+  signUpButton(){
     console.log('Sign up clicked');
   }
 
@@ -17,7 +16,7 @@ export default class SignUpButtonComponent extends Component{
     return (
       <View>
         <TouchableHighlight 
-          onPress={this.signUnButton.bind(this)}>
+          onPress={this.signUpButton.bind(this)}>
           <View>
             <Text>Sign Up</Text>
           </View>

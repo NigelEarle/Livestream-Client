@@ -19,10 +19,7 @@ let styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
     color: '#6984cb'
-  },
-  button: {
-
-  },
+  }
 
 });
 
@@ -34,7 +31,7 @@ export default class HomeComponent extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome To Livestream!
+          Welcome!
         </Text>
         <AuthComponent />
       </View>
