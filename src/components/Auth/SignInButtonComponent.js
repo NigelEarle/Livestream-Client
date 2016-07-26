@@ -7,7 +7,7 @@ import {
   Text
 } from 'react-native';
 
-export default class SignInComponent extends Component {
+export default class SignInButtonComponent extends Component {
   signInButton(){
     console.log("Sign in clicked");
   }
