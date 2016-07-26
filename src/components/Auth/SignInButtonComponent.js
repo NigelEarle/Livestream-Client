@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import SignInPageComponent from '../Auth/SignInPageComponent';
 
 import {
   TouchableHighlight,
@@ -17,21 +18,11 @@ let styles = StyleSheet.create({
 });
 
 export default class SignInButtonComponent extends Component {
-  // static propTypes = {
-  //   title: PropTypes.string.isRequired,
-  //   navigator: PropTypes.object.isRequired
-  // }
 
-  // constructor(props, context) {
-  //   super(props, context);
-  //   this._onForward = this._onForward.bind(this);
-  //   this._onBack = this._onBack.bind(this);
-  // }
   onSignInPressed(){
-    console.log("Sign in clicked");
     this.props.navigator.push({
       title: 'Sign In',
-      
+      component: SignInPageComponent
     });
   }
   

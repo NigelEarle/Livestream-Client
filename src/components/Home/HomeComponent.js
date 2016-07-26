@@ -18,7 +18,6 @@ let styles = StyleSheet.create({
   },
   welcome: {
     marginTop: 100,
-    color: '#6984cb'
   }
 
 });
@@ -26,13 +25,14 @@ let styles = StyleSheet.create({
 export default class HomeComponent extends Component {
   
   render() {
+    console.log(this.props.navigator)
     return (
       <View style={styles.welcome}>
         <Text>
           Welcome!
         </Text>
-        <SignInButtonComponent />
-        <SignUpButtonComponent />
+        <SignInButtonComponent navigator={this.props.navigator}/>
+        <SignUpButtonComponent navigator={this.props.navigator}/>
       </View>
     );
   }

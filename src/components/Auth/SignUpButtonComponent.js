@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SignUpPageComponent from './../Auth/SignUpPageComponent';
 
 import {
   TouchableHighlight,
@@ -15,10 +16,13 @@ let styles = StyleSheet.create({
     backgroundColor: '#EFEFEF'
   }
 })
-export default class SignUpButtonComponent extends Component{
+export default class SignUpButtonComponent extends Component {
 
   onSignUpPressed(){
-    console.log('Sign up clicked');
+    this.props.navigator.push({
+      title: 'Sign Up',
+      component: SignUpPageComponent
+    })
   }
 
   render() {
