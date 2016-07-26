@@ -11,6 +11,7 @@ let styles = StyleSheet.create({
     fontSize: 30,
     textAlign: 'center',
     margin: 100,
+    color: '#6984cb'
   }
 })
 
@@ -18,8 +19,8 @@ let styles = StyleSheet.create({
 export default class SignUpPageComponent extends Component {
   render() {
     return (
-      <View style={styles.signup}>
-        <Text>
+      <View>
+        <Text style={styles.signup}>
           Sign Up
         </Text>
       </View>
