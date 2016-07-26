@@ -23,7 +23,6 @@ let styles = StyleSheet.create({
 });
 
 export default class HomeComponent extends Component {
-  
   render() {
     console.log(this.props.navigator)
     return (
