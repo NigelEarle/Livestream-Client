@@ -55,12 +55,11 @@ export default class SignInPageComponent extends Component {
             this.setState({
               email: event.nativeEvent.text
             })
-            console.log("email state", this.state.email)
           }}
         />
         <TextInput
           placeholder="Password"
-          autoCorrec={false}
+          autoCorrect={false}
           style={styles.password}
           onChange={(event) => {
             this.setState({
