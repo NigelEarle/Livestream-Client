@@ -1,5 +1,5 @@
 import { handleActions } from 'redux-actions';
-import { ActionTypes } from '../constants';
+import { actionTypes } from '../constants';
 
 const state = {
   email: '',

@@ -6,8 +6,6 @@ const reducer = combineReducers(reducers);
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 
-const configureStore = function(initialState: Object = {}): Function {
+export default function configureStore(initialState){
   return createStoreWithMiddleware(rootReducer, initialState)
 };
-
-export default configureStore;
