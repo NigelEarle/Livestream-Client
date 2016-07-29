@@ -1,6 +1,4 @@
 import React, { Component } from 'React';
-import { Provider } from 'react-redux';
-import configureStore from './../../store/storeConfig';
 
 import SignInButtonComponent from './../Auth/SignInButtonComponent';
 import SignUpButtonComponent from './../Auth/SignUpButtonComponent';
@@ -28,15 +26,13 @@ let styles = StyleSheet.create({
 export default class HomeComponent extends Component {
   render() {
     return (
-      <Provider store={store}>
-        <View style={styles.welcome}>
-          <Text>
-            Welcome!
-          </Text>
-          <SignInButtonComponent navigator={this.props.navigator}/>
-          <SignUpButtonComponent navigator={this.props.navigator}/>
-        </View>
-      </Provider>
+      <View style={styles.welcome}>
+        <Text>
+          Welcome!
+        </Text>
+        <SignInButtonComponent navigator={this.props.navigator}/>
+        <SignUpButtonComponent navigator={this.props.navigator}/>
+      </View>
     );
   }
 }

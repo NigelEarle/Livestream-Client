@@ -5,8 +5,12 @@
  */
 
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import configureStore from './src/store/storeConfig';
 import HomeComponent from './src/components/Home/HomeComponent';
 
+// const store = configureStore();
+console.log(configureStore);
 import {
   AppRegistry,
   StyleSheet,
@@ -18,15 +22,18 @@ import {
 class LivestreamClient extends Component {
   render() {
     return (
-      <NavigatorIOS
-        style={styles.container}
-        initialRoute={{
-          title: 'Home',
-          component: HomeComponent
-        }} />
+      
+        <NavigatorIOS
+          style={styles.container}
+          initialRoute={{
+            title: 'Home',
+            component: HomeComponent
+          }} />
+      
     );
   }
 };
+//</Provider>
 
 // <View style={styles.container}>
 //   <Text style={styles.welcome}>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getSignInText } from './../../actions/appActions';
+import { getSignInText } from './../../actions/AppActions';
 
 import {
   TextInput,
@@ -42,10 +42,10 @@ class SignInPageComponent extends Component {
       password: ''
     }
   }
-  componentWillMount(){
-    // make dispatch func call
-    getSignInText();
-  }
+  // componentWillMount(){
+  //   // make dispatch func call
+  //   getSignInText();
+  // }
 
   render() {
     return (
