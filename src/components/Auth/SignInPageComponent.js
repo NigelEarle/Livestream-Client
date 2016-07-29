@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { getSignInText } from './../../actions/appActions';
 
 import {
   TextInput,
@@ -32,7 +34,7 @@ let styles = StyleSheet.create({
   }
 })
 
-export default class SignInPageComponent extends Component {
+class SignInPageComponent extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -40,12 +42,16 @@ export default class SignInPageComponent extends Component {
       password: ''
     }
   }
+  componentWillMount(){
+    // make dispatch func call
+    getSignInText();
+  }
 
   render() {
     return (
       <View>
         <Text style={styles.signin}>
-          Sign In
+          {this.props.message}
         </Text>
         <TextInput
           placeholder="Email"
@@ -71,3 +77,8 @@ export default class SignInPageComponent extends Component {
     );
   }
 }
+
+export default connect((state) => ({
+  // showcase render from redux state; will not persist
+  signin: state.signin
+}))(SignInPageComponent);

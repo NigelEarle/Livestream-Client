@@ -1,12 +1,20 @@
 import { handleActions } from 'redux-actions';
-import { actionTypes } from '../constants';
+import { ActionTypes } from '../constants/ActionTypes';
 
-const state = {
+const initialState = {
   email: '',
   password: '',
-  confirm: ''
+  confirm: '',
+  signin: ''
 };
 
 export default handleActions({
   // handle state
-});
+  [ActionTypes.GET_SIGNIN]: (state, action) => {
+
+    return {
+      ...state,
+      signin: action.data
+    }
+  }
+}, initialState);

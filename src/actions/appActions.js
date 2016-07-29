@@ -1,7 +1,11 @@
-import { actionTypes } from '../constants';
+import { ActionTypes } from '../constants/ActionTypes';
 import axios from 'axios';
 
 //define dispatch actions
-export function postLogin(){
-  // make request to server then dispatch action on pass or fail
+export function getSignInText(){
+  return dispatch({
+    type: actionTypes.GET_SIGNIN,
+    data: 'SIGN IN BRUH!!'
+  })
+  
 };
