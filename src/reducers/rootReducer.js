@@ -1,5 +1,5 @@
 import { handleActions } from 'redux-actions';
-import ActionTypes from '../constants/ActionTypes';
+import * as types from '../constants/ActionTypes';
 
 const initialState = {
   email: '',
@@ -8,14 +8,12 @@ const initialState = {
   signin: ''
 };
 
-export default Object;
-// export default handleActions({
-//   // handle state
-//   [ActionTypes.GET_SIGNIN]: (state, action) => {
+export default handleActions({
+  [types.GET_SIGNIN]: (state, action) => {
 
-//     return {
-//       ...state,
-//       signin: action.data
-//     }
-//   }
-// }, initialState);
+    return {
+      ...state,
+      signin: action.data
+    }
+  }
+}, initialState)

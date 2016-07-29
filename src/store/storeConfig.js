@@ -3,16 +3,13 @@ import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
 import reducer from '../reducers/rootReducer';
 
-console.log(reducer);
-// const redu = combineReducers(reducer);
-
 const logger = createLogger();
+const middleware = applyMiddleware(thunk, logger);
 
-const createStoreWithMiddleware = applyMiddleware(
-  thunk,
-  logger
-)(createStore);
+export default (data = {}) => {
+  const rootReducer = combineReducers({
+    app: reducer
+  });
 
-// export default function configureStore(initialState){
-//   return createStoreWithMiddleware(redu, initialState)
-// };
+  return createStore(rootReducer, data, middleware)
+};

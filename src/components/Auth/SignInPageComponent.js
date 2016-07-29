@@ -42,16 +42,18 @@ class SignInPageComponent extends Component {
       password: ''
     }
   }
-  // componentWillMount(){
-  //   // make dispatch func call
-  //   getSignInText();
-  // }
+
+  componentWillMount(){
+    // make dispatch func call
+    this.props.getSignInText();
+  }
 
   render() {
+    console.log("RENDER PROPS",this.props)
     return (
       <View>
         <Text style={styles.signin}>
-          {this.props.message}
+          {this.props.signin}
         </Text>
         <TextInput
           placeholder="Email"
@@ -78,7 +80,12 @@ class SignInPageComponent extends Component {
   }
 }
 
-export default connect((state) => ({
-  // showcase render from redux state; will not persist
-  signin: state.signin
-}))(SignInPageComponent);
+function mapStateToProps(state){
+  return {
+    signin: state.app.signin
+  }
+}
+
+export default connect(mapStateToProps, {
+  getSignInText: getSignInText
+})(SignInPageComponent);
